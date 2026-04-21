@@ -1,0 +1,48 @@
+# Copy this file to terraform.tfvars and fill in your values
+# cp terraform.tfvars.example terraform.tfvars
+
+# Required: AWS region
+aws_region = "ap-southeast-2"
+
+# Required: Project name (used for resource naming)
+project_name = "iot-pipeline"
+
+# Required: EC2 key pair name (must exist in your AWS account)
+key_name = "your-ec2-key-name"
+
+# Required: Your IP address for SSH access (change this for security!)
+allowed_ssh_cidrs = ["0.0.0.0/0"]  # Replace with ["YOUR_IP/32"]
+
+# Optional: Environment name
+environment = "prod"
+
+# Optional: EC2 instance types
+ingestor_instance_type  = "t3.small"
+processor_instance_type = "t3.medium"
+
+# Optional: EBS volume sizes (GB)
+ingestor_volume_size  = 20
+processor_volume_size = 20
+
+# Optional: S3 bucket prefix
+bucket_prefix = "fxa"
+
+# Optional: AQICN API token (leave empty to configure later)
+aqicn_token = ""
+
+# Optional: Kafka retention (7 days in milliseconds)
+kafka_retention_ms = 604800000
+
+# Optional: Enable detailed CloudWatch monitoring
+enable_monitoring = true
+
+# Optional: Prometheus data retention
+prometheus_retention_days = 30
+
+# Optional: Additional tags
+tags = {
+  Project     = "IoT Pipeline"
+  ManagedBy   = "Terraform"
+  Owner       = "Your Name"
+  CostCenter  = "Engineering"
+}
