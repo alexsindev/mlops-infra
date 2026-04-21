@@ -16,7 +16,6 @@ terraform/
 ├── user_data_ingestor.sh     # Bootstrap script
 ├── user_data_processor.sh    # Bootstrap script
 ├── terraform.tfvars.example  # Configuration template
-├── README.md                  # Complete documentation
 └── .gitignore                 # Git ignore rules
 ```
 
